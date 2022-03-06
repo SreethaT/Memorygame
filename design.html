@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF_8">
+
+        <title>Memory game </title>
+      <style>
+          * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    height: 100vh;
+    display: flex;
+}
+
+.memory-game{
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+.memory-card{
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition:transform .5s;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0,.3);
+}
+
+.memory-card :active{
+    transform: scale(0.97);
+    transition: transfom.2s;
+}
+.memory-card.flip{
+    transform: rotateY(180deg);
+}
+.front-face, .back-face {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background: #cf4545;
+    backface-visibility: hidden;
+
+}
+.front-face{
+    transform: rotateY(180deg);
+}
+      </style>
+    </head>
+    <body>
+        <section class="Memory-game">
+            <div class="Memory-card" data-framework="aurelia">
+                <img class="front-face" src="C:\Users\sreet\Documents\Memory game\aurelia.svg" alt="aurelia" />  
+                <img class="back-face" src="C:\Users\sreet\Documents\Memory game\js-badge.svg" alt="js-badge" />               
+            </div>
+            <div class="Memory-card" data-framework="angular">
+                <img class="front-face" src="C:\Users\sreet\Documents\Memory game\angular.svg" alt="angular" /> 
+                <img class="back-face" src="C:\Users\sreet\Documents\Memory game\js-badge.svg" alt="js-badge" />               
+            </div>
+            <div class="Memory-card" data-framework="backbone">
+                <img class="front-face" src="C:\Users\sreet\Documents\Memory game\backbone.svg" alt="backbone" /> 
+                <img class="back-face" src="C:\Users\sreet\Documents\Memory game\js-badge.svg" alt="js-badge" />               
+            </div>
+            <div class="Memory-card" data-framework="vue">
+                <img class="front-face" src="C:\Users\sreet\Documents\Memory game\vue.svg" alt="vue" /> 
+                <img class="back-face" src="C:\Users\sreet\Documents\Memory game\js-badge.svg" alt="js-badge" />               
+            </div>
+            <div class="Memory-card" data-framework="ember">
+                <img class="front-face" src="C:\Users\sreet\Documents\Memory game\ember.svg" alt="ember" /> 
+                <img class="back-face" src="C:\Users\sreet\Documents\Memory game\js-badge.svg" alt="js-badge" />               
+            </div>
+            <div class="Memory-card" data-framework="vue">
+                <img class="front-face" src="C:\Users\sreet\Documents\Memory game\vue.svg" alt="vue" /> 
+                <img class="back-face" src="C:\Users\sreet\Documents\Memory game\js-badge.svg" alt="js-badge" />               
+            </div>
+            <div class="Memory-card" data-framework="ember">
+                <img class="front-face" src="C:\Users\sreet\Documents\Memory game\ember.svg" alt="ember" /> 
+                <img class="back-face" src="C:\Users\sreet\Documents\Memory game\js-badge.svg" alt="js-badge" />               
+            </div>
+            <div class="Memory-card" data-framework="angular">
+                <img class="front-face" src="C:\Users\sreet\Documents\Memory game\angular.svg" alt="angular" /> 
+                <img class="back-face" src="C:\Users\sreet\Documents\Memory game\js-badge.svg" alt="js-badge" />               
+            </div>
+            <div class="Memory-card" data-framework="aurelia">
+                <img class="front-face" src="C:\Users\sreet\Documents\Memory game\aurelia.svg" alt="aurelia" /> 
+                <img class="back-face" src="C:\Users\sreet\Documents\Memory game\js-badge.svg" alt="js-badge" />               
+            </div>
+            <div class="Memory-card" data-framework="react">
+                <img class="front-face" src="C:\Users\sreet\Documents\Memory game\react.svg" alt="react" /> 
+                <img class="back-face" src="C:\Users\sreet\Documents\Memory game\js-badge.svg" alt="js-badge" />               
+            </div>
+            <div class="Memory-card" data-framework="backbone">
+                <img class="front-face" src="C:\Users\sreet\Documents\Memory game\backbone.svg" alt="backbone" /> 
+                <img class="back-face" src="C:\Users\sreet\Documents\Memory game\js-badge.svg" alt="js-badge" />               
+            </div>
+            <div class="Memory-card" data-framework="ember">
+                <img class="front-face" src="C:\Users\sreet\Documents\Memory game\ember.svg" alt="ember" /> 
+                <img class="back-face" src="C:\Users\sreet\Documents\Memory game\js-badge.svg" alt="js-badge" />               
+            </div>
+            <div class="Memory-card" data-framework="react">
+                <img class="front-face" src="C:\Users\sreet\Documents\Memory game\react.svg" alt="react" /> 
+                <img class="back-face" src="C:\Users\sreet\Documents\Memory game\js-badge.svg" alt="js-badge" />               
+            </div>
+            <div class="Memory-card" data-framework="angular">
+                <img class="front-face" src="C:\Users\sreet\Documents\Memory game\angular.svg" alt="angular" /> 
+                <img class="back-face" src="C:\Users\sreet\Documents\Memory game\js-badge.svg" alt="js-badge" />               
+            </div>
+            <div class="Memory-card" data-framework="react">
+                <img class="front-face" src="C:\Users\sreet\Documents\Memory game\react.svg" alt="react" /> 
+                <img class="back-face" src="C:\Users\sreet\Documents\Memory game\js-badge.svg" alt="js-badge" />               
+            </div>
+
+            <div class="Memory-card" data-framework="backbone">
+                <img class="front-face" src="C:\Users\sreet\Documents\Memory game\backbone.svg" alt="backbone" /> 
+                <img class="back-face" src="C:\Users\sreet\Documents\Memory game\js-badge.svg" alt="js-badge" />               
+            </div>
+        </section> 
+        <script src="C:\Users\sreet\Documents\Memory game\script.js"></script>
+        <script src="path/to/vanilla.js"></script>
+    </body>
+
+    
+</html>
